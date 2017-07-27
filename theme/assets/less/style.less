@@ -1,0 +1,354 @@
+/*!
+ *	Styles and dev by turpialdev.com
+ */
+
+
+// Bootstrap
+@import "bootstrap.less";
+/* @import "glyphicons.less"; */
+/*  @import "../css/main.less";  */
+
+
+h1, .h1 { font-size: floor(@font-size-base * 2.80); } // ~36px
+h2, .h2 { font-size: floor(@font-size-base * 2.60); } // ~30px
+h3, .h3 { font-size: ceil(@font-size-base * 1.90); } // ~24px
+h4, .h4 { font-size: ceil(@font-size-base * 1.55); } // ~18px
+h5, .h5 { font-size: ceil(@font-size-base * 1.25); }
+h6, .h6 { font-size: ceil(@font-size-base * 0.85); } // ~12px
+
+
+/* ==========================================================================
+		TURPIAL Portafolio
+   ========================================================================== */
+@welcome-color:  #21b942;
+/* ==========================================================================
+   wide carousel		!!cambiar, son tmeporales
+   ========================================================================== */
+
+body{
+/* 	padding-top: 70px; */
+	 
+}
+	.carousel-control {
+		  z-index: 10;
+		position: absolute;
+		top: 0%;
+		width: 40px;
+		height: 100%;
+		font-size: 30px;
+		padding-top:10px;
+		font-weight: 100;
+		line-height: 30px;
+		color: #ffffff;
+		text-align: center;
+/* 		background: none; */
+		border: none;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+
+	}
+	.carousel-control i{
+		position: absolute;
+		top: 40%;
+		z-index: 5;
+		display: inline-block;
+	}
+	.carousel-control.right {
+		right:  0px;
+		padding-right:  20px;
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-left-radius: 5px;
+		 border-top-left-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+/* 		background:none; */
+	}
+
+	.carousel-control.left {
+		padding-left: 20px;
+		right: auto;
+		-moz-border-radius-topright: 5px;
+		-webkit-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+/* 		background:none; */
+	}
+
+ 
+
+.carousel-caption{
+	left: 0;
+	right: 0;
+	bottom: 10%;
+	.container;
+	
+}
+
+.item .carousel-caption {
+	text-align: left;
+}
+
+img.back{
+	width: 100%; display: block;
+}
+
+
+/* HEADER */
+body{
+	background: 	url(../img/paper.jpg);
+	header#turpial{
+		.container;
+		position: relative;
+		min-height: 650px;
+		text-align: center;
+		
+		#logo{
+			.make-row();
+			img{
+				max-width: 400px;
+			}
+		}
+		p.lead{
+			.h2;	
+			font-size: 2em;
+			padding: 10px;
+			font-weight: 100;
+			color: #9d9ca1;
+		}
+		.destacado{
+			.make-row();
+			position: relative;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			p.lead{.make-sm-column(12);}
+			div{
+				.make-sm-column(4);
+				img{
+						height: 75px;
+	
+				}
+				h2{
+					margin-top: 0;
+				}
+				p{
+					.hidden;
+				}
+			}
+		}
+	}
+
+	
+} //body	
+
+
+
+/* Navbar */
+
+nav.navbar{
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+/* 	background-color: #f8f5e9; */
+	a.navbar-brand{
+		padding: 10px;
+	}
+}
+
+
+article{
+	& > .container > section, & > .section, & {
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	&#servicios{
+		padding-top: 0;
+		padding-bottom: 0;
+		& > .container > section, {
+			.make-row();		
+			border-bottom: solid 1px @gray-lighter;
+			
+			.texto{
+				.make-md-column(8);
+				}	
+			figure{
+				.make-md-column(4);
+				text-align: center;
+				max-height: 600px;
+				width: auto;
+	/* 			background-color: rgba(255,244,164,0.2); */
+				padding: 10px;
+				img{
+					
+				}
+			}
+		}
+	} 
+	
+	&.imagen{
+		background-color: @gray-dark;
+		background-size: cover;
+		background-attachment: fixed;
+		text-align: center;
+		padding-top: 75px;
+		padding-bottom: 75px;
+		color: @gray-lighter;
+		
+	}
+	&#sobre-turpial{
+		background-color: #1b191e;
+		background-image: url(../img/ccs-night-pano.png);
+	}
+	
+	&#asi-trabajamos{
+		.container;
+		.atributos{
+			.make-row();
+			.cuadricula{
+				.make-xs-column(6);
+				.make-md-column(7);
+				.make-lg-column(6);
+			}
+			.bloque{
+				float: left;
+				max-width: 25%;
+				min-width: 110px;
+				min-height: 100px;
+				
+				width: 123px;
+				height: 123px;
+				
+				
+				margin-bottom: 10px;
+				margin-right: 10px;
+				&>.info{
+
+					vertical-align: middle;
+					font-size: 70px;
+					text-align: center;
+					background-color: #ffd050;
+					height: 100%;
+					padding-top: 10px;
+					
+				}
+			}
+			.descripciones{
+				.make-xs-column(6);
+				.make-md-column(5);
+				.make-lg-column(6);		
+				
+				
+			}
+		}
+		
+		
+	}
+	
+	&#contactanos{
+		position: relative;
+		z-index: 1;
+		.container{
+			background-color: rgba(0,0,0,0.5);
+		}
+		h2{
+			display: inline-block;
+		}
+		section.datos{
+			.make-sm-column(4);
+			text-align: left;
+
+		}
+		form#contacto{
+			text-align: left;
+			.make-sm-column(6);
+ 			.make-sm-column-offset(2); 
+ 			button#contacto-send{
+	 			.btn;
+	 			.btn-default;
+	 			background: no-repeat right center  url(../img/avion_s.png);
+	 			padding: 20px 70px;
+
+ 			}
+		}
+
+		
+		
+	}
+}
+
+footer{
+		background:fixed url(../img/navy_blue.png);
+}
+.no-screen{ /* !!! poner que solo en screen */
+
+	display: none;
+}
+ div.muestra{
+    width: 140px;
+    height: 140px;
+    float: left;
+    margin-right: 15px;
+ }
+
+.icon-cancel:hover {
+    background: rgba(0,0,0,1);
+}
+
+
+
+.icon-cancel:before { content: '\2715'; } /* '✕' */
+
+
+
+
+
+/* .muestra *, */
+.papel-single, 
+.papel-final,
+.papel-initial-content,
+.papel-back,
+ .papel-front 
+{
+    background: #ffcd41;
+}
+
+
+
+ .papel-initial-content {
+}
+
+ .papel-final-content  {}
+ .papel-final  {
+
+    height: 280px;
+    width: 280px;
+}
+
+
+ .icon-cancel {
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 15px;
+    font-size: 18px;
+    color: #fff;
+    opacity: 1;
+    width: 18px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+ .icon-cancel:hover {
+    background: rgba(0,0,0,1);
+}
+
+ .papelcurrent .muestra{
+
+}
